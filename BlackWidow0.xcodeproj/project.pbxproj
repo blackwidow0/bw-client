@@ -7,15 +7,65 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3735F0AC1B3D9FFB00B543D0 /* DisplayRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3735F0AB1B3D9FFB00B543D0 /* DisplayRepository.swift */; };
+		3735F0AE1B3DA73C00B543D0 /* DisplayHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3735F0AD1B3DA73C00B543D0 /* DisplayHeader.swift */; };
+		3735F1271B419D0500B543D0 /* libSignalR.Client.iOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3735F0A91B3B07F500B543D0 /* libSignalR.Client.iOS.a */; };
+		3735F1291B41EE2D00B543D0 /* DisplayListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3735F1281B41EE2D00B543D0 /* DisplayListViewController.swift */; };
+		3735F12B1B44923600B543D0 /* DisplayDataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3735F12A1B44923600B543D0 /* DisplayDataViewController.swift */; };
+		3735F12D1B4493C600B543D0 /* DisplayData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3735F12C1B4493C600B543D0 /* DisplayData.swift */; };
 		3773D16C1B336F270047C410 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3773D16B1B336F270047C410 /* AppDelegate.swift */; };
-		3773D16E1B336F270047C410 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3773D16D1B336F270047C410 /* ViewController.swift */; };
+		3773D16E1B336F270047C410 /* ModuleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3773D16D1B336F270047C410 /* ModuleViewController.swift */; };
 		3773D1711B336F270047C410 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3773D16F1B336F270047C410 /* Main.storyboard */; };
 		3773D1731B336F270047C410 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3773D1721B336F270047C410 /* Images.xcassets */; };
 		3773D1761B336F270047C410 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3773D1741B336F270047C410 /* LaunchScreen.xib */; };
 		3773D1821B336F270047C410 /* BlackWidow0Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3773D1811B336F270047C410 /* BlackWidow0Tests.swift */; };
+		3773D18E1B336FAC0047C410 /* libicucore.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 3773D18D1B336FAC0047C410 /* libicucore.dylib */; };
+		3773D1911B33785F0047C410 /* displayCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3773D1901B33785F0047C410 /* displayCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		3735F0FD1B4199CE00B543D0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3735F0B71B4199CE00B543D0 /* SignalR.Client.ObjC.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 3920780715AF13C3009B959E;
+			remoteInfo = SignalR.Client.iOS;
+		};
+		3735F0FF1B4199CE00B543D0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3735F0B71B4199CE00B543D0 /* SignalR.Client.ObjC.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 3919636E15AF205300DDC946;
+			remoteInfo = SignalR.Client.OSX;
+		};
+		3735F1011B4199CE00B543D0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3735F0B71B4199CE00B543D0 /* SignalR.Client.ObjC.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 39E6FD1715C6BF4000434098;
+			remoteInfo = SignalR.Client.Tests.iOS;
+		};
+		3735F1031B4199CE00B543D0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3735F0B71B4199CE00B543D0 /* SignalR.Client.ObjC.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 39E6FCD515C6BDC600434098;
+			remoteInfo = SignalR.Client.Tests.OSX;
+		};
+		3735F1051B4199CE00B543D0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3735F0B71B4199CE00B543D0 /* SignalR.Client.ObjC.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 3920791E15AF1853009B959E;
+			remoteInfo = SignalR.Samples.iOS;
+		};
+		3735F1071B4199CE00B543D0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3735F0B71B4199CE00B543D0 /* SignalR.Client.ObjC.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 3919634415AF1EC100DDC946;
+			remoteInfo = SignalR.Samples.OSX;
+		};
 		3773D17C1B336F270047C410 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 3773D15E1B336F270047C410 /* Project object */;
@@ -26,16 +76,104 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3735F0A91B3B07F500B543D0 /* libSignalR.Client.iOS.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libSignalR.Client.iOS.a; path = "../lib/SignalR-ObjC/Debug-iphoneos/libSignalR.Client.iOS.a"; sourceTree = "<group>"; };
+		3735F0AB1B3D9FFB00B543D0 /* DisplayRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DisplayRepository.swift; sourceTree = "<group>"; };
+		3735F0AD1B3DA73C00B543D0 /* DisplayHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DisplayHeader.swift; sourceTree = "<group>"; };
+		3735F0B01B4199CE00B543D0 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		3735F0B11B4199CE00B543D0 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		3735F0B21B4199CE00B543D0 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		3735F0B31B4199CE00B543D0 /* icon.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = icon.icns; sourceTree = "<group>"; };
+		3735F0B41B4199CE00B543D0 /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
+		3735F0B61B4199CE00B543D0 /* SignalR.Client.iOS-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SignalR.Client.iOS-Prefix.pch"; sourceTree = "<group>"; };
+		3735F0B71B4199CE00B543D0 /* SignalR.Client.ObjC.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = SignalR.Client.ObjC.xcodeproj; sourceTree = "<group>"; };
+		3735F0BB1B4199CE00B543D0 /* SignalR.Client.OSX-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SignalR.Client.OSX-Prefix.pch"; sourceTree = "<group>"; };
+		3735F0BC1B4199CE00B543D0 /* SignalR_Client_OSX.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SignalR_Client_OSX.h; sourceTree = "<group>"; };
+		3735F0BD1B4199CE00B543D0 /* SignalR_Client_OSX.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SignalR_Client_OSX.m; sourceTree = "<group>"; };
+		3735F0BF1B4199CE00B543D0 /* SRChunkBufferTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SRChunkBufferTests.m; sourceTree = "<group>"; };
+		3735F0C01B4199CE00B543D0 /* SRConnectionTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SRConnectionTests.m; sourceTree = "<group>"; };
+		3735F0C11B4199CE00B543D0 /* SRHubConnectionTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SRHubConnectionTests.m; sourceTree = "<group>"; };
+		3735F0C21B4199CE00B543D0 /* SRHubProxyTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SRHubProxyTests.m; sourceTree = "<group>"; };
+		3735F0C31B4199CE00B543D0 /* SRJSONTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SRJSONTests.m; sourceTree = "<group>"; };
+		3735F0C61B4199CE00B543D0 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		3735F0C71B4199CE00B543D0 /* SignalR.Client.Tests.iOS-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SignalR.Client.Tests.iOS-Info.plist"; sourceTree = "<group>"; };
+		3735F0C81B4199CE00B543D0 /* SignalR.Client.Tests.iOS-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SignalR.Client.Tests.iOS-Prefix.pch"; sourceTree = "<group>"; };
+		3735F0CB1B4199CE00B543D0 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		3735F0CC1B4199CE00B543D0 /* SignalR.Client.Tests.OSX-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SignalR.Client.Tests.OSX-Info.plist"; sourceTree = "<group>"; };
+		3735F0CD1B4199CE00B543D0 /* SignalR.Client.Tests.OSX-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SignalR.Client.Tests.OSX-Prefix.pch"; sourceTree = "<group>"; };
+		3735F0CF1B4199CE00B543D0 /* Router.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Router.h; sourceTree = "<group>"; };
+		3735F0D01B4199CE00B543D0 /* Router.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Router.m; sourceTree = "<group>"; };
+		3735F0D31B4199CE00B543D0 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		3735F0D41B4199CE00B543D0 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		3735F0D51B4199CE00B543D0 /* ChatViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ChatViewController.h; sourceTree = "<group>"; };
+		3735F0D61B4199CE00B543D0 /* ChatViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ChatViewController.m; sourceTree = "<group>"; };
+		3735F0D71B4199CE00B543D0 /* ConnectionStatusViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ConnectionStatusViewController.h; sourceTree = "<group>"; };
+		3735F0D81B4199CE00B543D0 /* ConnectionStatusViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ConnectionStatusViewController.m; sourceTree = "<group>"; };
+		3735F0D91B4199CE00B543D0 /* MasterViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MasterViewController.h; sourceTree = "<group>"; };
+		3735F0DA1B4199CE00B543D0 /* MasterViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MasterViewController.m; sourceTree = "<group>"; };
+		3735F0DB1B4199CE00B543D0 /* MouseTrackingViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MouseTrackingViewController.h; sourceTree = "<group>"; };
+		3735F0DC1B4199CE00B543D0 /* MouseTrackingViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MouseTrackingViewController.m; sourceTree = "<group>"; };
+		3735F0DD1B4199CE00B543D0 /* RawViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RawViewController.h; sourceTree = "<group>"; };
+		3735F0DE1B4199CE00B543D0 /* RawViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RawViewController.m; sourceTree = "<group>"; };
+		3735F0DF1B4199CE00B543D0 /* StreamingViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StreamingViewController.h; sourceTree = "<group>"; };
+		3735F0E01B4199CE00B543D0 /* StreamingViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StreamingViewController.m; sourceTree = "<group>"; };
+		3735F0E21B4199CE00B543D0 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		3735F0E41B4199CE00B543D0 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPad.storyboard; sourceTree = "<group>"; };
+		3735F0E61B4199CE00B543D0 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPhone.storyboard; sourceTree = "<group>"; };
+		3735F0E71B4199CE00B543D0 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		3735F0E81B4199CE00B543D0 /* SignalR.Samples.iOS-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SignalR.Samples.iOS-Info.plist"; sourceTree = "<group>"; };
+		3735F0E91B4199CE00B543D0 /* SignalR.Samples.iOS-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SignalR.Samples.iOS-Prefix.pch"; sourceTree = "<group>"; };
+		3735F0EB1B4199CE00B543D0 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		3735F0EC1B4199CE00B543D0 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		3735F0EE1B4199CE00B543D0 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
+		3735F0F01B4199CE00B543D0 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		3735F0F21B4199CE00B543D0 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		3735F0F31B4199CE00B543D0 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		3735F0F41B4199CE00B543D0 /* SignalR.Samples.OSX-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SignalR.Samples.OSX-Info.plist"; sourceTree = "<group>"; };
+		3735F0F51B4199CE00B543D0 /* SignalR.Samples.OSX-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SignalR.Samples.OSX-Prefix.pch"; sourceTree = "<group>"; };
+		3735F1091B4199F900B543D0 /* libSignalR.Client.iOS.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libSignalR.Client.iOS.a; path = "../lib/SignalR-ObjC/Debug-iphonesimulator/libSignalR.Client.iOS.a"; sourceTree = "<group>"; };
+		3735F10C1B419B4900B543D0 /* SignalR.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SignalR.h; sourceTree = "<group>"; };
+		3735F10D1B419B4900B543D0 /* SRAutoTransport.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SRAutoTransport.h; sourceTree = "<group>"; };
+		3735F10E1B419B4900B543D0 /* SRClientTransportInterface.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SRClientTransportInterface.h; sourceTree = "<group>"; };
+		3735F10F1B419B4900B543D0 /* SRConnection.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SRConnection.h; sourceTree = "<group>"; };
+		3735F1101B419B4900B543D0 /* SRConnectionDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SRConnectionDelegate.h; sourceTree = "<group>"; };
+		3735F1111B419B4900B543D0 /* SRConnectionExtensions.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SRConnectionExtensions.h; sourceTree = "<group>"; };
+		3735F1121B419B4900B543D0 /* SRConnectionInterface.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SRConnectionInterface.h; sourceTree = "<group>"; };
+		3735F1131B419B4900B543D0 /* SRConnectionState.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SRConnectionState.h; sourceTree = "<group>"; };
+		3735F1141B419B4900B543D0 /* SRDeserializable.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SRDeserializable.h; sourceTree = "<group>"; };
+		3735F1151B419B4900B543D0 /* SRHttpBasedTransport.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SRHttpBasedTransport.h; sourceTree = "<group>"; };
+		3735F1161B419B4900B543D0 /* SRHubConnection.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SRHubConnection.h; sourceTree = "<group>"; };
+		3735F1171B419B4900B543D0 /* SRHubConnectionInterface.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SRHubConnectionInterface.h; sourceTree = "<group>"; };
+		3735F1181B419B4900B543D0 /* SRHubInvocation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SRHubInvocation.h; sourceTree = "<group>"; };
+		3735F1191B419B4900B543D0 /* SRHubProxy.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SRHubProxy.h; sourceTree = "<group>"; };
+		3735F11A1B419B4900B543D0 /* SRHubProxyExtensions.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SRHubProxyExtensions.h; sourceTree = "<group>"; };
+		3735F11B1B419B4900B543D0 /* SRHubProxyInterface.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SRHubProxyInterface.h; sourceTree = "<group>"; };
+		3735F11C1B419B4900B543D0 /* SRHubRegistrationData.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SRHubRegistrationData.h; sourceTree = "<group>"; };
+		3735F11D1B419B4900B543D0 /* SRHubResult.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SRHubResult.h; sourceTree = "<group>"; };
+		3735F11E1B419B4900B543D0 /* SRHubs.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SRHubs.h; sourceTree = "<group>"; };
+		3735F11F1B419B4900B543D0 /* SRHubservable.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SRHubservable.h; sourceTree = "<group>"; };
+		3735F1201B419B4900B543D0 /* SRLog.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SRLog.h; sourceTree = "<group>"; };
+		3735F1211B419B4900B543D0 /* SRLongPollingTransport.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SRLongPollingTransport.h; sourceTree = "<group>"; };
+		3735F1221B419B4900B543D0 /* SRSerializable.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SRSerializable.h; sourceTree = "<group>"; };
+		3735F1231B419B4900B543D0 /* SRServerSentEventsTransport.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SRServerSentEventsTransport.h; sourceTree = "<group>"; };
+		3735F1241B419B4900B543D0 /* SRSubscription.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SRSubscription.h; sourceTree = "<group>"; };
+		3735F1251B419B4900B543D0 /* SRWebSocketTransport.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SRWebSocketTransport.h; sourceTree = "<group>"; };
+		3735F1281B41EE2D00B543D0 /* DisplayListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DisplayListViewController.swift; sourceTree = "<group>"; };
+		3735F12A1B44923600B543D0 /* DisplayDataViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DisplayDataViewController.swift; sourceTree = "<group>"; };
+		3735F12C1B4493C600B543D0 /* DisplayData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DisplayData.swift; sourceTree = "<group>"; };
 		3773D1661B336F270047C410 /* BlackWidow0.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BlackWidow0.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3773D16A1B336F270047C410 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3773D16B1B336F270047C410 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		3773D16D1B336F270047C410 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		3773D16D1B336F270047C410 /* ModuleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModuleViewController.swift; sourceTree = "<group>"; };
 		3773D1701B336F270047C410 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		3773D1721B336F270047C410 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		3773D1751B336F270047C410 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		3773D17B1B336F270047C410 /* BlackWidow0Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BlackWidow0Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3773D1801B336F270047C410 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3773D1811B336F270047C410 /* BlackWidow0Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlackWidow0Tests.swift; sourceTree = "<group>"; };
+		3773D18B1B336F9A0047C410 /* libSignalR.Client.iOS.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libSignalR.Client.iOS.a; sourceTree = "<group>"; };
+		3773D18D1B336FAC0047C410 /* libicucore.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libicucore.dylib; sourceTree = "<group>"; };
+		3773D18F1B3372AF0047C410 /* Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Bridging-Header.h"; sourceTree = "<group>"; };
+		3773D1901B33785F0047C410 /* displayCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = displayCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,6 +181,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3735F1271B419D0500B543D0 /* libSignalR.Client.iOS.a in Frameworks */,
+				3773D18E1B336FAC0047C410 /* libicucore.dylib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -56,9 +196,193 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3735F0AF1B4199CE00B543D0 /* SignalR.Client.ObjC */ = {
+			isa = PBXGroup;
+			children = (
+				3735F0B01B4199CE00B543D0 /* Default-568h@2x.png */,
+				3735F0B11B4199CE00B543D0 /* Default.png */,
+				3735F0B21B4199CE00B543D0 /* Default@2x.png */,
+				3735F0B31B4199CE00B543D0 /* icon.icns */,
+				3735F0B41B4199CE00B543D0 /* icon.png */,
+				3735F0B51B4199CE00B543D0 /* SignalR.Client.iOS */,
+				3735F0B71B4199CE00B543D0 /* SignalR.Client.ObjC.xcodeproj */,
+				3735F0BA1B4199CE00B543D0 /* SignalR.Client.OSX */,
+				3735F0BE1B4199CE00B543D0 /* SignalR.Client.Tests */,
+				3735F0C41B4199CE00B543D0 /* SignalR.Client.Tests.iOS */,
+				3735F0C91B4199CE00B543D0 /* SignalR.Client.Tests.OSX */,
+				3735F0CE1B4199CE00B543D0 /* SignalR.Samples */,
+				3735F0D11B4199CE00B543D0 /* SignalR.Samples.iOS */,
+				3735F0EA1B4199CE00B543D0 /* SignalR.Samples.OSX */,
+			);
+			name = SignalR.Client.ObjC;
+			path = "../SignalR-ObjC/SignalR.Client.ObjC";
+			sourceTree = "<group>";
+		};
+		3735F0B51B4199CE00B543D0 /* SignalR.Client.iOS */ = {
+			isa = PBXGroup;
+			children = (
+				3735F0B61B4199CE00B543D0 /* SignalR.Client.iOS-Prefix.pch */,
+			);
+			path = SignalR.Client.iOS;
+			sourceTree = "<group>";
+		};
+		3735F0B81B4199CE00B543D0 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3735F0FE1B4199CE00B543D0 /* libSignalR.Client.iOS.a */,
+				3735F1001B4199CE00B543D0 /* libSignalR.Client.OSX.a */,
+				3735F1021B4199CE00B543D0 /* SignalR.Client.Tests.iOS.octest */,
+				3735F1041B4199CE00B543D0 /* SignalR.Client.Tests.OSX.octest */,
+				3735F1061B4199CE00B543D0 /* SignalR.Samples.iOS.app */,
+				3735F1081B4199CE00B543D0 /* SignalR.Samples.OSX.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		3735F0BA1B4199CE00B543D0 /* SignalR.Client.OSX */ = {
+			isa = PBXGroup;
+			children = (
+				3735F0BB1B4199CE00B543D0 /* SignalR.Client.OSX-Prefix.pch */,
+				3735F0BC1B4199CE00B543D0 /* SignalR_Client_OSX.h */,
+				3735F0BD1B4199CE00B543D0 /* SignalR_Client_OSX.m */,
+			);
+			path = SignalR.Client.OSX;
+			sourceTree = "<group>";
+		};
+		3735F0BE1B4199CE00B543D0 /* SignalR.Client.Tests */ = {
+			isa = PBXGroup;
+			children = (
+				3735F0BF1B4199CE00B543D0 /* SRChunkBufferTests.m */,
+				3735F0C01B4199CE00B543D0 /* SRConnectionTests.m */,
+				3735F0C11B4199CE00B543D0 /* SRHubConnectionTests.m */,
+				3735F0C21B4199CE00B543D0 /* SRHubProxyTests.m */,
+				3735F0C31B4199CE00B543D0 /* SRJSONTests.m */,
+			);
+			path = SignalR.Client.Tests;
+			sourceTree = "<group>";
+		};
+		3735F0C41B4199CE00B543D0 /* SignalR.Client.Tests.iOS */ = {
+			isa = PBXGroup;
+			children = (
+				3735F0C51B4199CE00B543D0 /* InfoPlist.strings */,
+				3735F0C71B4199CE00B543D0 /* SignalR.Client.Tests.iOS-Info.plist */,
+				3735F0C81B4199CE00B543D0 /* SignalR.Client.Tests.iOS-Prefix.pch */,
+			);
+			path = SignalR.Client.Tests.iOS;
+			sourceTree = "<group>";
+		};
+		3735F0C91B4199CE00B543D0 /* SignalR.Client.Tests.OSX */ = {
+			isa = PBXGroup;
+			children = (
+				3735F0CA1B4199CE00B543D0 /* InfoPlist.strings */,
+				3735F0CC1B4199CE00B543D0 /* SignalR.Client.Tests.OSX-Info.plist */,
+				3735F0CD1B4199CE00B543D0 /* SignalR.Client.Tests.OSX-Prefix.pch */,
+			);
+			path = SignalR.Client.Tests.OSX;
+			sourceTree = "<group>";
+		};
+		3735F0CE1B4199CE00B543D0 /* SignalR.Samples */ = {
+			isa = PBXGroup;
+			children = (
+				3735F0CF1B4199CE00B543D0 /* Router.h */,
+				3735F0D01B4199CE00B543D0 /* Router.m */,
+			);
+			path = SignalR.Samples;
+			sourceTree = "<group>";
+		};
+		3735F0D11B4199CE00B543D0 /* SignalR.Samples.iOS */ = {
+			isa = PBXGroup;
+			children = (
+				3735F0D21B4199CE00B543D0 /* Controllers */,
+				3735F0E11B4199CE00B543D0 /* InfoPlist.strings */,
+				3735F0E31B4199CE00B543D0 /* MainStoryboard_iPad.storyboard */,
+				3735F0E51B4199CE00B543D0 /* MainStoryboard_iPhone.storyboard */,
+				3735F0E71B4199CE00B543D0 /* main.m */,
+				3735F0E81B4199CE00B543D0 /* SignalR.Samples.iOS-Info.plist */,
+				3735F0E91B4199CE00B543D0 /* SignalR.Samples.iOS-Prefix.pch */,
+			);
+			path = SignalR.Samples.iOS;
+			sourceTree = "<group>";
+		};
+		3735F0D21B4199CE00B543D0 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				3735F0D31B4199CE00B543D0 /* AppDelegate.h */,
+				3735F0D41B4199CE00B543D0 /* AppDelegate.m */,
+				3735F0D51B4199CE00B543D0 /* ChatViewController.h */,
+				3735F0D61B4199CE00B543D0 /* ChatViewController.m */,
+				3735F0D71B4199CE00B543D0 /* ConnectionStatusViewController.h */,
+				3735F0D81B4199CE00B543D0 /* ConnectionStatusViewController.m */,
+				3735F0D91B4199CE00B543D0 /* MasterViewController.h */,
+				3735F0DA1B4199CE00B543D0 /* MasterViewController.m */,
+				3735F0DB1B4199CE00B543D0 /* MouseTrackingViewController.h */,
+				3735F0DC1B4199CE00B543D0 /* MouseTrackingViewController.m */,
+				3735F0DD1B4199CE00B543D0 /* RawViewController.h */,
+				3735F0DE1B4199CE00B543D0 /* RawViewController.m */,
+				3735F0DF1B4199CE00B543D0 /* StreamingViewController.h */,
+				3735F0E01B4199CE00B543D0 /* StreamingViewController.m */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		3735F0EA1B4199CE00B543D0 /* SignalR.Samples.OSX */ = {
+			isa = PBXGroup;
+			children = (
+				3735F0EB1B4199CE00B543D0 /* AppDelegate.h */,
+				3735F0EC1B4199CE00B543D0 /* AppDelegate.m */,
+				3735F0ED1B4199CE00B543D0 /* Credits.rtf */,
+				3735F0EF1B4199CE00B543D0 /* InfoPlist.strings */,
+				3735F0F11B4199CE00B543D0 /* MainMenu.xib */,
+				3735F0F31B4199CE00B543D0 /* main.m */,
+				3735F0F41B4199CE00B543D0 /* SignalR.Samples.OSX-Info.plist */,
+				3735F0F51B4199CE00B543D0 /* SignalR.Samples.OSX-Prefix.pch */,
+			);
+			path = SignalR.Samples.OSX;
+			sourceTree = "<group>";
+		};
+		3735F10B1B419B4900B543D0 /* SignalR.Client.iOS */ = {
+			isa = PBXGroup;
+			children = (
+				3735F10C1B419B4900B543D0 /* SignalR.h */,
+				3735F10D1B419B4900B543D0 /* SRAutoTransport.h */,
+				3735F10E1B419B4900B543D0 /* SRClientTransportInterface.h */,
+				3735F10F1B419B4900B543D0 /* SRConnection.h */,
+				3735F1101B419B4900B543D0 /* SRConnectionDelegate.h */,
+				3735F1111B419B4900B543D0 /* SRConnectionExtensions.h */,
+				3735F1121B419B4900B543D0 /* SRConnectionInterface.h */,
+				3735F1131B419B4900B543D0 /* SRConnectionState.h */,
+				3735F1141B419B4900B543D0 /* SRDeserializable.h */,
+				3735F1151B419B4900B543D0 /* SRHttpBasedTransport.h */,
+				3735F1161B419B4900B543D0 /* SRHubConnection.h */,
+				3735F1171B419B4900B543D0 /* SRHubConnectionInterface.h */,
+				3735F1181B419B4900B543D0 /* SRHubInvocation.h */,
+				3735F1191B419B4900B543D0 /* SRHubProxy.h */,
+				3735F11A1B419B4900B543D0 /* SRHubProxyExtensions.h */,
+				3735F11B1B419B4900B543D0 /* SRHubProxyInterface.h */,
+				3735F11C1B419B4900B543D0 /* SRHubRegistrationData.h */,
+				3735F11D1B419B4900B543D0 /* SRHubResult.h */,
+				3735F11E1B419B4900B543D0 /* SRHubs.h */,
+				3735F11F1B419B4900B543D0 /* SRHubservable.h */,
+				3735F1201B419B4900B543D0 /* SRLog.h */,
+				3735F1211B419B4900B543D0 /* SRLongPollingTransport.h */,
+				3735F1221B419B4900B543D0 /* SRSerializable.h */,
+				3735F1231B419B4900B543D0 /* SRServerSentEventsTransport.h */,
+				3735F1241B419B4900B543D0 /* SRSubscription.h */,
+				3735F1251B419B4900B543D0 /* SRWebSocketTransport.h */,
+			);
+			name = SignalR.Client.iOS;
+			path = "../lib/SignalR-ObjC/Debug-iphoneos/SignalR.Client.iOS";
+			sourceTree = "<group>";
+		};
 		3773D15D1B336F270047C410 = {
 			isa = PBXGroup;
 			children = (
+				3735F10B1B419B4900B543D0 /* SignalR.Client.iOS */,
+				3735F1091B4199F900B543D0 /* libSignalR.Client.iOS.a */,
+				3735F0AF1B4199CE00B543D0 /* SignalR.Client.ObjC */,
+				3735F0A91B3B07F500B543D0 /* libSignalR.Client.iOS.a */,
+				3773D18B1B336F9A0047C410 /* libSignalR.Client.iOS.a */,
+				3773D18D1B336FAC0047C410 /* libicucore.dylib */,
 				3773D1681B336F270047C410 /* BlackWidow0 */,
 				3773D17E1B336F270047C410 /* BlackWidow0Tests */,
 				3773D1671B336F270047C410 /* Products */,
@@ -78,11 +402,17 @@
 			isa = PBXGroup;
 			children = (
 				3773D16B1B336F270047C410 /* AppDelegate.swift */,
-				3773D16D1B336F270047C410 /* ViewController.swift */,
+				3773D16D1B336F270047C410 /* ModuleViewController.swift */,
+				3735F1281B41EE2D00B543D0 /* DisplayListViewController.swift */,
+				3735F12A1B44923600B543D0 /* DisplayDataViewController.swift */,
 				3773D16F1B336F270047C410 /* Main.storyboard */,
 				3773D1721B336F270047C410 /* Images.xcassets */,
 				3773D1741B336F270047C410 /* LaunchScreen.xib */,
 				3773D1691B336F270047C410 /* Supporting Files */,
+				3773D1901B33785F0047C410 /* displayCell.swift */,
+				3735F0AB1B3D9FFB00B543D0 /* DisplayRepository.swift */,
+				3735F0AD1B3DA73C00B543D0 /* DisplayHeader.swift */,
+				3735F12C1B4493C600B543D0 /* DisplayData.swift */,
 			);
 			path = BlackWidow0;
 			sourceTree = "<group>";
@@ -91,6 +421,7 @@
 			isa = PBXGroup;
 			children = (
 				3773D16A1B336F270047C410 /* Info.plist */,
+				3773D18F1B3372AF0047C410 /* Bridging-Header.h */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -161,6 +492,7 @@
 				TargetAttributes = {
 					3773D1651B336F270047C410 = {
 						CreatedOnToolsVersion = 6.3.2;
+						DevelopmentTeam = G8THXAJKAW;
 					};
 					3773D17A1B336F270047C410 = {
 						CreatedOnToolsVersion = 6.3.2;
@@ -179,6 +511,12 @@
 			mainGroup = 3773D15D1B336F270047C410;
 			productRefGroup = 3773D1671B336F270047C410 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 3735F0B81B4199CE00B543D0 /* Products */;
+					ProjectRef = 3735F0B71B4199CE00B543D0 /* SignalR.Client.ObjC.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				3773D1651B336F270047C410 /* BlackWidow0 */,
@@ -186,6 +524,51 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		3735F0FE1B4199CE00B543D0 /* libSignalR.Client.iOS.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libSignalR.Client.iOS.a;
+			remoteRef = 3735F0FD1B4199CE00B543D0 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		3735F1001B4199CE00B543D0 /* libSignalR.Client.OSX.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libSignalR.Client.OSX.a;
+			remoteRef = 3735F0FF1B4199CE00B543D0 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		3735F1021B4199CE00B543D0 /* SignalR.Client.Tests.iOS.octest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = SignalR.Client.Tests.iOS.octest;
+			remoteRef = 3735F1011B4199CE00B543D0 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		3735F1041B4199CE00B543D0 /* SignalR.Client.Tests.OSX.octest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = SignalR.Client.Tests.OSX.octest;
+			remoteRef = 3735F1031B4199CE00B543D0 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		3735F1061B4199CE00B543D0 /* SignalR.Samples.iOS.app */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.application;
+			path = SignalR.Samples.iOS.app;
+			remoteRef = 3735F1051B4199CE00B543D0 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		3735F1081B4199CE00B543D0 /* SignalR.Samples.OSX.app */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.application;
+			path = SignalR.Samples.OSX.app;
+			remoteRef = 3735F1071B4199CE00B543D0 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		3773D1641B336F270047C410 /* Resources */ = {
@@ -212,8 +595,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3773D16E1B336F270047C410 /* ViewController.swift in Sources */,
+				3735F0AC1B3D9FFB00B543D0 /* DisplayRepository.swift in Sources */,
+				3735F1291B41EE2D00B543D0 /* DisplayListViewController.swift in Sources */,
+				3773D16E1B336F270047C410 /* ModuleViewController.swift in Sources */,
+				3735F0AE1B3DA73C00B543D0 /* DisplayHeader.swift in Sources */,
+				3735F12D1B4493C600B543D0 /* DisplayData.swift in Sources */,
 				3773D16C1B336F270047C410 /* AppDelegate.swift in Sources */,
+				3773D1911B33785F0047C410 /* displayCell.swift in Sources */,
+				3735F12B1B44923600B543D0 /* DisplayDataViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -236,6 +625,70 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		3735F0C51B4199CE00B543D0 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3735F0C61B4199CE00B543D0 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		3735F0CA1B4199CE00B543D0 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3735F0CB1B4199CE00B543D0 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		3735F0E11B4199CE00B543D0 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3735F0E21B4199CE00B543D0 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		3735F0E31B4199CE00B543D0 /* MainStoryboard_iPad.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3735F0E41B4199CE00B543D0 /* en */,
+			);
+			name = MainStoryboard_iPad.storyboard;
+			sourceTree = "<group>";
+		};
+		3735F0E51B4199CE00B543D0 /* MainStoryboard_iPhone.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3735F0E61B4199CE00B543D0 /* en */,
+			);
+			name = MainStoryboard_iPhone.storyboard;
+			sourceTree = "<group>";
+		};
+		3735F0ED1B4199CE00B543D0 /* Credits.rtf */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3735F0EE1B4199CE00B543D0 /* en */,
+			);
+			name = Credits.rtf;
+			sourceTree = "<group>";
+		};
+		3735F0EF1B4199CE00B543D0 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3735F0F01B4199CE00B543D0 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		3735F0F11B4199CE00B543D0 /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3735F0F21B4199CE00B543D0 /* en */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
 		3773D16F1B336F270047C410 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -341,20 +794,50 @@
 		3773D1861B336F270047C410 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = BlackWidow0/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"/Users/RContegni/dev/lib/SignalR-ObjC/Debug-iphoneos",
+				);
+				OTHER_LDFLAGS = (
+					"-all_load",
+					"-ObjC",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "BlackWidow0/Bridging-Header.h";
+				TARGETED_DEVICE_FAMILY = 2;
+				USER_HEADER_SEARCH_PATHS = "/Users/RContegni/dev/lib/SignalR-ObjC/debug-iphoneos/**";
 			};
 			name = Debug;
 		};
 		3773D1871B336F270047C410 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = BlackWidow0/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"/Users/RContegni/dev/lib/SignalR-ObjC/Debug-iphoneos",
+				);
+				OTHER_LDFLAGS = (
+					"-all_load",
+					"-ObjC",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "BlackWidow0/Bridging-Header.h";
+				TARGETED_DEVICE_FAMILY = 2;
+				USER_HEADER_SEARCH_PATHS = "/Users/RContegni/dev/lib/SignalR-ObjC/debug-iphoneos/**";
 			};
 			name = Release;
 		};
@@ -411,6 +894,7 @@
 				3773D1871B336F270047C410 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		3773D1881B336F270047C410 /* Build configuration list for PBXNativeTarget "BlackWidow0Tests" */ = {
 			isa = XCConfigurationList;
@@ -419,6 +903,7 @@
 				3773D18A1B336F270047C410 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
