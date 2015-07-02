@@ -2,7 +2,7 @@
 //  AppDelegate.swift
 //  BlackWidow0
 //
-//  Created by Rodrigo Contegni on 6/18/15.
+//  Created by Kathryn Reagan on 6/18/15.
 //  Copyright (c) 2015 Emerson Process Management. All rights reserved.
 //
 
