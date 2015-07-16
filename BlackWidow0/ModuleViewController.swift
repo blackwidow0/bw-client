@@ -50,16 +50,16 @@ class ModuleViewController: UIViewController {
         //productionHub.invoke("initializeAsync", withArgs: []);
         
         // print displays to the screen
-//        var disRep = DisplayRepository()
-//        var displays = DisplayRepository.GetDisplays()
-//        //    NSLog(displays)
-//        var str = "There are \(displays.count) displays: \n"
-//        for disp in displays{
-//            // NSLog(str)
-//            let strId = disp.Id.UUIDString
-//            str += "ID: \(strId) | Name: \(disp.Name) \n"
-//        }
-//        displayDesc.text = str
+        //        var disRep = DisplayRepository()
+        //        var displays = DisplayRepository.GetDisplays()
+        //        //    NSLog(displays)
+        //        var str = "There are \(displays.count) displays: \n"
+        //        for disp in displays{
+        //            // NSLog(str)
+        //            let strId = disp.Id.UUIDString
+        //            str += "ID: \(strId) | Name: \(disp.Name) \n"
+        //        }
+        //        displayDesc.text = str
         
         
     }
@@ -88,7 +88,7 @@ class ModuleViewController: UIViewController {
     }
     
     
- 
+    
     
     
     //

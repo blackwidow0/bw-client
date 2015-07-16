@@ -8,16 +8,13 @@
 
 //import Cocoa
 
+import Foundation
+import UIKit
+
 class DisplayRepository: NSObject {
-    //var count: Int
-    
-    override init(){
-       // do nothing
-        // count = 0
-    }
-    
    
-    static func GetDisplays() -> [DisplayHeader] {
+   
+    static func getDisplays() -> [DisplayHeader] {
         var urlPath: String = "http://usaust-dev631.emrsn.org:49590/api/displays"
         var url = NSURLRequest(URL: NSURL(string: urlPath)!)
         var str = "initialized"
@@ -25,17 +22,18 @@ class DisplayRepository: NSObject {
         var dispList = [DisplayHeader]()
         
         var response: AutoreleasingUnsafeMutablePointer<NSURLResponse?> = nil
-        var dataVal: NSData = NSURLConnection.sendSynchronousRequest(url, returningResponse: response, error: nil)!
-        var err: NSError?
-        //        println(response)
-        var jsonResult: NSArray = (NSJSONSerialization.JSONObjectWithData(dataVal, options: NSJSONReadingOptions.MutableContainers, error: &err) as? NSArray)!
-        //        println("Synchronous \(jsonResult)")
-        dispList = ParseDisplays(jsonResult)
+        var error1: NSError?
+        var dataVal: NSData? = NSURLConnection.sendSynchronousRequest(url, returningResponse: response, error: &error1)
+        var error2: NSError?
+        if (dataVal == nil){
+            NSLog("FATAL ERROR")
+            NSLog(error1!.description)
+            return dispList
+        }
+        var jsonResult: NSArray = (NSJSONSerialization.JSONObjectWithData(dataVal!, options: NSJSONReadingOptions.MutableContainers, error: &error2) as? NSArray)!
         
-        
-        //        println(str)
-        //        return "Does returning anything even work? \n Let's seeeee: \n \(jsonResult)"
-        
+        dispList = parseDisplays(jsonResult)
+                
         
         return dispList
         
@@ -43,16 +41,15 @@ class DisplayRepository: NSObject {
     
     
     
-    static func ParseDisplays(displays: NSArray) -> [DisplayHeader]{
+    static func parseDisplays(displays: NSArray) -> [DisplayHeader]{
         var dispList = [DisplayHeader]()
         
         for disp in displays{
             let id: AnyObject? = disp["Id"]
             let name: AnyObject? = disp["Name"]
             let uuid: NSUUID = NSUUID(UUIDString: id as! String)!
-            let newDisp = DisplayHeader(Id: uuid, Name: (name as! String))
+            let newDisp = DisplayHeader(id: uuid, name: (name as! String))
             dispList.append(newDisp)
-            //count++
         }
         
         return dispList
@@ -63,36 +60,28 @@ class DisplayRepository: NSObject {
     
     
     
-    static func GetDisplay(display: DisplayHeader) -> DisplayData{
-        var data: NSString
+    static func getDisplay(display: DisplayHeader) -> Display {
         
-        
-        var urlPath: String = "http://usaust-dev631.emrsn.org:49590/api/displays/\(display.Name)"
+        var urlPath: String = "http://usaust-dev631.emrsn.org:49590/api/displays/\(display.name)"
         var url = NSURLRequest(URL: NSURL(string: urlPath)!)
         
         var response: AutoreleasingUnsafeMutablePointer<NSURLResponse?> = nil
         var dataVal: NSData = NSURLConnection.sendSynchronousRequest(url, returningResponse: response, error: nil)!
         var err: NSError?
-        //        println(response)
+        
         var jsonResult: NSDictionary = (NSJSONSerialization.JSONObjectWithData(dataVal, options: NSJSONReadingOptions.MutableContainers, error: &err) as? NSDictionary)!
-        //        println("Synchronous \(jsonResult)")
+       
+        // decode XML data:
+        let base64: AnyObject? = jsonResult["Xml"] // read XML data as AnyObject
+        let base64String = (base64 as! String) // convert XML data to String (base 64 encoded)
+        let decodedData = NSData(base64EncodedString: base64String, options: NSDataBase64DecodingOptions(rawValue: 0)) // turn base 64 string into NSData
+        let data = NSString(data: decodedData!, encoding: NSUTF8StringEncoding)! // in order to convert to a NSUTF-8 string
         
-        let base64: AnyObject? = jsonResult["Xml"]
-        let base64String = (base64 as! String)
-        
-        // need to convert base64 back to UFT-8 FIGURE IT OUT TOMORROW
-    
-        let decodedData = NSData(base64EncodedString: base64String, options: NSDataBase64DecodingOptions(rawValue: 0))
-        data = NSString(data: decodedData!, encoding: NSUTF8StringEncoding)!
-    
-        
-        return DisplayData(Id: display.Id, Name: display.Name, Xml: (data as! String))
+        let dispData = DisplayData(id: display.id, name: display.name, xml: (data.dataUsingEncoding(NSUTF16StringEncoding))!)
+        return ParseDisplay.parse(dispData)
     }
     
-    
-    
-        
-    
+
         
 } // end DisplayRepository
 

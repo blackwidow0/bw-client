@@ -12,7 +12,7 @@ import UIKit
 
 class DisplayListViewController: UITableViewController {
     
-    var displays = DisplayRepository.GetDisplays()
+    var displays = DisplayRepository.getDisplays()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,12 +20,12 @@ class DisplayListViewController: UITableViewController {
         //        var disRep = DisplayRepository()
         //        displays = disRep.GetDisplays()
         var str = "There are \(displays.count) displays: \n"
-        NSLog(str)
+       // NSLog(str)
         for disp in displays{
-            let strId = disp.Id.UUIDString
-            str += "ID: \(strId) | Name: \(disp.Name) \n"
+            let strId = disp.id.UUIDString
+            str += "ID: \(strId) | Name: \(disp.name) \n"
         }
-        NSLog(str)
+       // NSLog(str)
         tableView.rowHeight = 70
     }
     
@@ -44,7 +44,7 @@ class DisplayListViewController: UITableViewController {
     }
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("displayCell") as! displayCell
+        let cell = tableView.dequeueReusableCellWithIdentifier("displayCell") as! DisplayCell
         
         
         //let cell = tableView.dequeueReusableCellWithIdentifier("displayCell", forIndexPath: indexPath) as! UITableViewCell
@@ -52,7 +52,7 @@ class DisplayListViewController: UITableViewController {
         
         // cell.textLabel?.textColor = UIColor.whiteColor()
         var cellInfo: DisplayHeader = displays[indexPath.item]
-        var label: String = "\(cellInfo.Name): \(cellInfo.Id.UUIDString)"
+        var label: String = "\(cellInfo.name): \(cellInfo.id.UUIDString)"
         NSLog(label)
         cell.textLabel?.text = label
         cell.display = cellInfo
@@ -62,8 +62,8 @@ class DisplayListViewController: UITableViewController {
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if(segue.identifier == "displayDetail"){
-            let cell = sender as! displayCell
-            let displayDetail = segue.destinationViewController as! DisplayDataViewController
+            let cell = sender as! DisplayCell
+            let displayDetail = segue.destinationViewController as! DisplayViewController
             displayDetail.disp = cell.display
         }}
     

@@ -10,13 +10,12 @@
 
 class DisplayHeader: NSObject {
     
-//    var Id : guid_t
-    var Id : NSUUID
-    var Name : String
+    var id : NSUUID
+    var name : String
     
-    init(Id: NSUUID, Name: String){
-        self.Id = Id;
-        self.Name = Name;
+    init(id: NSUUID, name: String){
+        self.id = id
+        self.name = name
     }
     
     

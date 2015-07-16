@@ -7,17 +7,14 @@
 //
 
 
-class DisplayData: NSObject {
+class DisplayData: DisplayHeader {
 
-    var Id: NSUUID
-    var Name: String
-    var Xml: String
+    var xml: NSData
     
     
-    init(Id: NSUUID, Name: String, Xml: String){
-        self.Id = Id
-        self.Name = Name
-        self.Xml = Xml
+    init(id: NSUUID, name: String, xml: NSData){
+        self.xml = xml
+        super.init(id: id, name: name)
     }
     
     

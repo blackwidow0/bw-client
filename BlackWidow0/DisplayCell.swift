@@ -8,7 +8,7 @@
 
 import UIKit
 
-class displayCell: UITableViewCell {
+class DisplayCell: UITableViewCell {
     
     var display: DisplayHeader?
     
