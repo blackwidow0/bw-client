@@ -14,7 +14,6 @@
 		3735F12B1B44923600B543D0 /* DisplayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3735F12A1B44923600B543D0 /* DisplayViewController.swift */; };
 		3735F12D1B4493C600B543D0 /* DisplayData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3735F12C1B4493C600B543D0 /* DisplayData.swift */; };
 		3773D16C1B336F270047C410 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3773D16B1B336F270047C410 /* AppDelegate.swift */; };
-		3773D16E1B336F270047C410 /* ModuleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3773D16D1B336F270047C410 /* ModuleViewController.swift */; };
 		3773D1711B336F270047C410 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3773D16F1B336F270047C410 /* Main.storyboard */; };
 		3773D1731B336F270047C410 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3773D1721B336F270047C410 /* Images.xcassets */; };
 		3773D1761B336F270047C410 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3773D1741B336F270047C410 /* LaunchScreen.xib */; };
@@ -31,10 +30,10 @@
 		379084EF1B4DBC9700A27C64 /* Display.swift in Sources */ = {isa = PBXBuildFile; fileRef = 379084EE1B4DBC9700A27C64 /* Display.swift */; };
 		379085211B4F002A00A27C64 /* DrawShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = 379085201B4F002A00A27C64 /* DrawShape.swift */; };
 		3790852B1B546AD700A27C64 /* ParseDisplay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3790852A1B546AD700A27C64 /* ParseDisplay.swift */; };
-		3790852D1B55773600A27C64 /* Module.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3790852C1B55773600A27C64 /* Module.swift */; };
-		3790852F1B559C3400A27C64 /* SubscriptionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3790852E1B559C3400A27C64 /* SubscriptionManager.swift */; };
-		37DB04F21B56B2A2002409F5 /* DataGraphic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37DB04F11B56B2A2002409F5 /* DataGraphic.swift */; };
+		37C782271B6A85C400651E0F /* AnalogControlBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37C782261B6A85C400651E0F /* AnalogControlBox.swift */; };
 		37DB04FB1B56C563002409F5 /* DataLink.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37DB04FA1B56C563002409F5 /* DataLink.swift */; };
+		37DB04FD1B5EA29E002409F5 /* Text.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37DB04FC1B5EA29E002409F5 /* Text.swift */; };
+		37DB04FF1B5EF16A002409F5 /* Parameter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37DB04FE1B5EF16A002409F5 /* Parameter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -177,7 +176,6 @@
 		3773D1661B336F270047C410 /* BlackWidow0.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BlackWidow0.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3773D16A1B336F270047C410 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3773D16B1B336F270047C410 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		3773D16D1B336F270047C410 /* ModuleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModuleViewController.swift; sourceTree = "<group>"; };
 		3773D1701B336F270047C410 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		3773D1721B336F270047C410 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		3773D1751B336F270047C410 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
@@ -198,10 +196,10 @@
 		379084EE1B4DBC9700A27C64 /* Display.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Display.swift; sourceTree = "<group>"; };
 		379085201B4F002A00A27C64 /* DrawShape.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DrawShape.swift; sourceTree = "<group>"; };
 		3790852A1B546AD700A27C64 /* ParseDisplay.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParseDisplay.swift; sourceTree = "<group>"; };
-		3790852C1B55773600A27C64 /* Module.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Module.swift; sourceTree = "<group>"; };
-		3790852E1B559C3400A27C64 /* SubscriptionManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SubscriptionManager.swift; sourceTree = "<group>"; };
-		37DB04F11B56B2A2002409F5 /* DataGraphic.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataGraphic.swift; sourceTree = "<group>"; };
+		37C782261B6A85C400651E0F /* AnalogControlBox.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnalogControlBox.swift; sourceTree = "<group>"; };
 		37DB04FA1B56C563002409F5 /* DataLink.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataLink.swift; sourceTree = "<group>"; };
+		37DB04FC1B5EA29E002409F5 /* Text.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Text.swift; sourceTree = "<group>"; };
+		37DB04FE1B5EF16A002409F5 /* Parameter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Parameter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -431,9 +429,7 @@
 			isa = PBXGroup;
 			children = (
 				3773D16B1B336F270047C410 /* AppDelegate.swift */,
-				3773D16D1B336F270047C410 /* ModuleViewController.swift */,
 				3735F1281B41EE2D00B543D0 /* DisplayListViewController.swift */,
-				3773D1901B33785F0047C410 /* DisplayCell.swift */,
 				3735F12A1B44923600B543D0 /* DisplayViewController.swift */,
 				3773D16F1B336F270047C410 /* Main.storyboard */,
 				3773D1721B336F270047C410 /* Images.xcassets */,
@@ -441,13 +437,9 @@
 				3735F0AB1B3D9FFB00B543D0 /* DisplayRepository.swift */,
 				3790852A1B546AD700A27C64 /* ParseDisplay.swift */,
 				379084E51B4D71A000A27C64 /* AEXML.swift */,
-				3735F0AD1B3DA73C00B543D0 /* DisplayHeader.swift */,
-				3735F12C1B4493C600B543D0 /* DisplayData.swift */,
-				379084EE1B4DBC9700A27C64 /* Display.swift */,
-				379084D71B4C80D200A27C64 /* Graphics */,
 				379085201B4F002A00A27C64 /* DrawShape.swift */,
-				3790852C1B55773600A27C64 /* Module.swift */,
-				3790852E1B559C3400A27C64 /* SubscriptionManager.swift */,
+				37C782311B7E685900651E0F /* Objects */,
+				379084D71B4C80D200A27C64 /* Graphics */,
 			);
 			path = BlackWidow0;
 			sourceTree = "<group>";
@@ -485,13 +477,26 @@
 				379084D81B4C81B100A27C64 /* GraphicItem.swift */,
 				379084DA1B4C81B900A27C64 /* Circle.swift */,
 				379084DC1B4C81C100A27C64 /* Pie.swift */,
+				37DB04FA1B56C563002409F5 /* DataLink.swift */,
 				379084DE1B4C8C1400A27C64 /* Position.swift */,
 				379084E01B4C8C2100A27C64 /* Border.swift */,
 				379084E21B4C8C2B00A27C64 /* Fill.swift */,
-				37DB04F11B56B2A2002409F5 /* DataGraphic.swift */,
-				37DB04FA1B56C563002409F5 /* DataLink.swift */,
+				37DB04FC1B5EA29E002409F5 /* Text.swift */,
+				37C782261B6A85C400651E0F /* AnalogControlBox.swift */,
 			);
 			name = Graphics;
+			sourceTree = "<group>";
+		};
+		37C782311B7E685900651E0F /* Objects */ = {
+			isa = PBXGroup;
+			children = (
+				3773D1901B33785F0047C410 /* DisplayCell.swift */,
+				3735F0AD1B3DA73C00B543D0 /* DisplayHeader.swift */,
+				3735F12C1B4493C600B543D0 /* DisplayData.swift */,
+				379084EE1B4DBC9700A27C64 /* Display.swift */,
+				37DB04FE1B5EF16A002409F5 /* Parameter.swift */,
+			);
+			name = Objects;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -646,25 +651,24 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				37DB04FF1B5EF16A002409F5 /* Parameter.swift in Sources */,
 				3735F0AC1B3D9FFB00B543D0 /* DisplayRepository.swift in Sources */,
 				379084E11B4C8C2100A27C64 /* Border.swift in Sources */,
 				3735F1291B41EE2D00B543D0 /* DisplayListViewController.swift in Sources */,
-				3773D16E1B336F270047C410 /* ModuleViewController.swift in Sources */,
 				3790852B1B546AD700A27C64 /* ParseDisplay.swift in Sources */,
+				37C782271B6A85C400651E0F /* AnalogControlBox.swift in Sources */,
 				3735F0AE1B3DA73C00B543D0 /* DisplayHeader.swift in Sources */,
 				3735F12D1B4493C600B543D0 /* DisplayData.swift in Sources */,
-				37DB04F21B56B2A2002409F5 /* DataGraphic.swift in Sources */,
 				379084DD1B4C81C100A27C64 /* Pie.swift in Sources */,
 				379084DF1B4C8C1400A27C64 /* Position.swift in Sources */,
-				3790852D1B55773600A27C64 /* Module.swift in Sources */,
 				379084DB1B4C81B900A27C64 /* Circle.swift in Sources */,
 				379084E31B4C8C2B00A27C64 /* Fill.swift in Sources */,
+				37DB04FD1B5EA29E002409F5 /* Text.swift in Sources */,
 				379085211B4F002A00A27C64 /* DrawShape.swift in Sources */,
 				3773D16C1B336F270047C410 /* AppDelegate.swift in Sources */,
 				37DB04FB1B56C563002409F5 /* DataLink.swift in Sources */,
 				3773D1911B33785F0047C410 /* DisplayCell.swift in Sources */,
 				379084E61B4D71A000A27C64 /* AEXML.swift in Sources */,
-				3790852F1B559C3400A27C64 /* SubscriptionManager.swift in Sources */,
 				3735F12B1B44923600B543D0 /* DisplayViewController.swift in Sources */,
 				379084EF1B4DBC9700A27C64 /* Display.swift in Sources */,
 				379084D91B4C81B100A27C64 /* GraphicItem.swift in Sources */,

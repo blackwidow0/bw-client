@@ -13,24 +13,25 @@ import UIKit
 class DrawShape : UIView {
     
     let shape: GraphicItem
-    //
-    //    override init(frame: CGRect) {
-    //        shape = nil
-    //        super.init(frame: frame)
-    //    }
-    //
+    let scale: CGFloat
+   
     required init(coder aDecoder: NSCoder) {
         shape = GraphicItem()
+        scale = 1
         super.init(coder: aDecoder)
     }
     
-    init(frame: CGRect, shape: GraphicItem) {
+    init(frame: CGRect, shape: GraphicItem, scale: CGFloat) {
         self.shape = shape
+        self.scale = scale
         super.init(frame: frame)
         self.backgroundColor = UIColor.clearColor()
+       
     }
     
     
+    // method is inherently called
+    // currently can only draw circles, pies, data links, and analog control boxes
     override func drawRect(rect: CGRect) {
         if shape.type == "circle" {
             drawCircle(rect, cir: (shape as? Circle)!)
@@ -38,16 +39,22 @@ class DrawShape : UIView {
         else if shape.type == "pie" {
             drawPie(rect, pie: (shape as? Pie)!)
         }
-            
+        else if shape.type == "datalink" {
+            drawDataLink(rect, dl: (shape as? DataLink)!)
+        }
+        else if shape.type == "analogcontrolbox" {
+            drawAnalogControlBox(rect, acb: (shape as? AnalogControlBox)!)
+        }
         else{
-            NSLog("not a circle or pie, you suck")
+            NSLog("cannot draw shape")
         }
         
     }
     
     
+    
+    
     func drawCircle(rect: CGRect, cir: Circle){
-     
         var bounds:CGRect = rect
         var center = CGPoint()
         center.x = bounds.origin.x + bounds.size.width / 2.0
@@ -63,8 +70,6 @@ class DrawShape : UIView {
         path.stroke()
         cir.fill.color.setFill()
         path.fill()
-        
-        
     }
     
     
@@ -94,7 +99,50 @@ class DrawShape : UIView {
     
     
     
-    // can't get this to work
+    
+    
+    func drawDataLink(rect: CGRect, dl: DataLink){
+        var bounds:CGRect = rect
+        var scaledSize = (dl.text.fontSize) / scale
+        var font = UIFont(name: dl.text.fontFamily, size: scaledSize)!
+        var attributes = [NSForegroundColorAttributeName: dl.text.color, NSFontAttributeName: font]
+        (dl.text.str).drawInRect(rect, withAttributes: attributes)
+
+    }
+    
+    
+    
+    func drawAnalogControlBox(rect: CGRect, acb: AnalogControlBox){
+        
+        var path:UIBezierPath = UIBezierPath(rect: rect)
+        path.lineWidth = acb.border.thickness
+        acb.border.color.setStroke()
+       
+        acb.fill.color.setFill()
+        path.fill()
+        path.stroke()
+        
+        
+        var scaledSize = (acb.labels.fontSize) / scale
+        var font = UIFont(name: acb.labels.fontFamily, size: scaledSize)!
+        let attributes = [NSForegroundColorAttributeName: acb.labels.color, NSFontAttributeName: font]
+        (acb.labels.str).drawInRect(rect, withAttributes: attributes)
+        
+        
+        for l in acb.links {
+            drawDataLink(CGRectMake(l.position.x / scale, l.position.y / scale, l.width / scale, (l.height / scale)), dl: l)
+        }
+        rect.height
+
+        
+        
+    }
+
+    
+    
+    
+    
+    // can't get this to work correctly -- the math is off, so the fill percentage does not match that of graphics studio (thinking about it two different ways)
 //    func drawFill(rect: CGRect, shape: Pie){
 //        var bounds:CGRect = rect
 //        var center = CGPoint()
@@ -116,22 +164,16 @@ class DrawShape : UIView {
 //        path.stroke()
 //        shape.fill.background.setFill()
 //        path.fill()
-//    
-//    
-//    
 //    }
-    
     
     
     
     
     func degToRad(deg: NSNumber) -> CGFloat {
         var num = CGFloat(deg) * CGFloat(M_PI) / 180.0
-        NSLog("\(deg) degrees = \(num) radians.")
         return num
     }
-    
-    
+   
     
     
 }

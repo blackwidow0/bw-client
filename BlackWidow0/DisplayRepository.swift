@@ -6,7 +6,6 @@
 //  Copyright (c) 2015 Emerson Process Management. All rights reserved.
 //
 
-//import Cocoa
 
 import Foundation
 import UIKit
@@ -55,8 +54,7 @@ class DisplayRepository: NSObject {
         return dispList
     } // end ParseDisplays
     
-    
-    
+
     
     
     
@@ -64,12 +62,18 @@ class DisplayRepository: NSObject {
         
         var urlPath: String = "http://usaust-dev631.emrsn.org:49590/api/displays/\(display.name)"
         var url = NSURLRequest(URL: NSURL(string: urlPath)!)
-        
-        var response: AutoreleasingUnsafeMutablePointer<NSURLResponse?> = nil
-        var dataVal: NSData = NSURLConnection.sendSynchronousRequest(url, returningResponse: response, error: nil)!
         var err: NSError?
+        var response: AutoreleasingUnsafeMutablePointer<NSURLResponse?> = nil
+        var dataVal: NSData? = NSURLConnection.sendSynchronousRequest(url, returningResponse: response, error: &err)!
         
-        var jsonResult: NSDictionary = (NSJSONSerialization.JSONObjectWithData(dataVal, options: NSJSONReadingOptions.MutableContainers, error: &err) as? NSDictionary)!
+        if (dataVal == nil){
+            NSLog(err!.description)
+            return Display()
+        }
+
+        
+        
+        var jsonResult: NSDictionary = (NSJSONSerialization.JSONObjectWithData(dataVal!, options: NSJSONReadingOptions.MutableContainers, error: &err) as? NSDictionary)!
        
         // decode XML data:
         let base64: AnyObject? = jsonResult["Xml"] // read XML data as AnyObject

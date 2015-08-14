@@ -2,7 +2,7 @@
 //  Display.swift
 //  BlackWidow0
 //
-//  Created by Rodrigo Contegni on 7/8/15.
+//  Created by Kathryn Reagan on 7/8/15.
 //  Copyright (c) 2015 Emerson Process Management. All rights reserved.
 //
 
@@ -11,27 +11,45 @@ import UIKit
 
 class Display: DisplayHeader {
     
-  //  var name: String
     var width: CGFloat
     var height: CGFloat
     var bgColor: UIColor
     var graphics: [GraphicItem]
-   // var modules: [Module]
+    var paramGraphics: Dictionary<Parameter, [DataLink]>
     
     
-    init(id: NSUUID, name: String, xml: NSData, width: CGFloat, height: CGFloat, bgColor: UIColor, graphics: [GraphicItem]){
-      //  self.name = name
+    init(id: NSUUID, name: String, xml: NSData, width: CGFloat, height: CGFloat, bgColor: UIColor){
         self.width = width
         self.height = height
         self.bgColor = bgColor
-        self.graphics = graphics
-       // self.modules = modules
+        self.graphics = []
+        self.paramGraphics = [:]
         super.init(id: id, name: name)
+    }
+    
+    
+    // default constructor
+    init() {
+        self.width = 0.0
+        self.height = 0.0
+        self.bgColor = UIColor(white: 0, alpha: 0)
+        self.graphics = []
+        self.paramGraphics = [:]
+        let id = NSUUID(UUIDString: "00000000-0000-0000-0000-000000000000")
+        let name = "Go back and reload."
+        super.init(id: id!, name: name)
     }
     
     
     func addGraphic(graphic: GraphicItem) {
         graphics.append(graphic)
+    }
+    
+    
+    func addPG(param: Parameter, graphic: DataLink){
+        var grx = paramGraphics[param] ?? []
+        grx += [graphic]
+        paramGraphics[param] = grx
     }
     
     
@@ -48,6 +66,7 @@ class Display: DisplayHeader {
         str += "\n\nEnd of display."
         return str
     }
+    
     
     func colorString() -> String {
         var rgba: [CGFloat] = [0, 0, 0, 0]

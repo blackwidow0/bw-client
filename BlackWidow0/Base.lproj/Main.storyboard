@@ -4,63 +4,6 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
     </dependencies>
     <scenes>
-        <!--Module View-->
-        <scene sceneID="tne-QT-ifu">
-            <objects>
-                <viewController title="Module View" id="BYZ-38-t0r" customClass="ModuleViewController" customModule="BlackWidow0" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
-                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ErJ-90-0eJ">
-                                <rect key="frame" x="196" y="164" width="376" height="43"/>
-                                <fontDescription key="fontDescription" name="Verdana-Bold" family="Verdana" pointSize="24"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UCK-Z6-Wbm">
-                                <rect key="frame" x="36" y="99" width="696" height="43"/>
-                                <fontDescription key="fontDescription" name="Verdana-Bold" family="Verdana" pointSize="32"/>
-                                <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hCL-WC-ynn">
-                                <rect key="frame" x="196" y="266" width="376" height="43"/>
-                                <fontDescription key="fontDescription" name="Verdana-Bold" family="Verdana" pointSize="24"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fZN-1c-147">
-                                <rect key="frame" x="196" y="215" width="376" height="43"/>
-                                <fontDescription key="fontDescription" name="Verdana-Bold" family="Verdana" pointSize="24"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aXk-iB-16z">
-                                <rect key="frame" x="-5" y="20" width="773" height="44"/>
-                                <items>
-                                    <navigationItem id="bRA-qJ-GKw"/>
-                                </items>
-                            </navigationBar>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                    </view>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="iPad"/>
-                    <connections>
-                        <outlet property="param1" destination="ErJ-90-0eJ" id="Ga7-zG-s7o"/>
-                        <outlet property="param2" destination="fZN-1c-147" id="g9h-z0-15V"/>
-                        <outlet property="param3" destination="hCL-WC-ynn" id="eRP-29-4fV"/>
-                        <outlet property="title1" destination="UCK-Z6-Wbm" id="tpK-uo-nEW"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1671" y="-455"/>
-        </scene>
         <!--Display List View-->
         <scene sceneID="JC2-Tb-0n9">
             <objects>
@@ -86,13 +29,7 @@
                             <outlet property="delegate" destination="fu5-Z5-1SL" id="ajr-d2-7s0"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="View List of Displays" id="w86-Sm-3h3">
-                        <barButtonItem key="rightBarButtonItem" title="Module Data" id="Yn7-K6-Gpa">
-                            <connections>
-                                <segue destination="BYZ-38-t0r" kind="show" id="tAh-kJ-RQT"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" title="View List of Displays" id="w86-Sm-3h3"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="iPad"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="I95-QS-Ma1" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -116,7 +53,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="72E-ZU-UOX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="737" y="754"/>
+            <point key="canvasLocation" x="737" y="736"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="hJc-uf-b7r">

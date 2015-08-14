@@ -31,6 +31,7 @@ class Border {
         return "Border has thickness of \(thickness) pt.\n" + colorString()
     }
     
+    
     func colorString() -> String {
         var rgba: [CGFloat] = [0, 0, 0, 0]
         
